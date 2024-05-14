@@ -3,7 +3,6 @@ import MaxWidthWrapper from "./MaxWidthWrapper"
 import { buttonVariants } from "./ui/button"
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/server"
 import { ArrowRight } from "lucide-react"
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 
 const Navbar = () => {
   return(
@@ -22,19 +21,12 @@ const Navbar = () => {
               })}>Pricing
               </Link>
 
-              {/* <LoginLink className={buttonVariants({
+              <LoginLink className={buttonVariants({
                 variant: "ghost",
                 size: 'sm'
               })}>
               Sign in
-              </LoginLink> */}
-              <SignedOut>
-                <SignInButton />
-              </SignedOut>
-
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
+              </LoginLink> 
 
               <RegisterLink className={buttonVariants({
                 size: 'sm'
